@@ -54,18 +54,23 @@ export function useAuth() {
     setLoading(true);
     try {
       const sanitizedEmail = email.trim().toLowerCase();
-      // Save lead to Firestore
-      await setDoc(doc(db, 'leads', sanitizedEmail), {
-        email: sanitizedEmail,
-        capturedAt: serverTimestamp(),
-      });
+      
+      // Save lead to Firestore - Fire and forget
+      if (db) {
+        setDoc(doc(db, 'leads', sanitizedEmail), {
+          email: sanitizedEmail,
+          capturedAt: serverTimestamp(),
+        }).catch((error) => {
+          console.warn("Could not capture lead in Firestore:", error);
+        });
+      }
 
       const newUser = { id: sanitizedEmail, email: sanitizedEmail };
       globalUser = newUser;
       localStorage.setItem('plantao_user_email', sanitizedEmail);
       notifyListeners();
     } catch (error) {
-      console.error("Error signing in:", error);
+      console.error("Sign in error:", error);
       throw error;
     } finally {
       setLoading(false);

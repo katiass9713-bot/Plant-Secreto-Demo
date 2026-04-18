@@ -24,9 +24,9 @@ service cloud.firestore {
 
     // Leads collection: anyone can submit their email to "sign in"
     match /leads/{email} {
-      allow create: if isValidId(email) && isValidLead(request.resource.data);
-      // No reading or updating by clients to prevent scraping the email list
-      allow get, list, update, delete: if false;
+      allow create, update: if email is string && email.size() <= 150;
+      // No reading or deleting by clients to prevent scraping the email list
+      allow get, list, delete: if false;
     }
 
     // Connection test document

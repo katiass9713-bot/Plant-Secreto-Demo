@@ -66,29 +66,35 @@ export function useGameState(userEmail?: string) {
     }
 
     const storageKey = `plantao_state_${userEmail}`;
-    const stored = localStorage.getItem(storageKey);
-    
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      // Reset daily limit if it's a new day
-      if (parsed.lastPlayedDate && !isToday(new Date(parsed.lastPlayedDate))) {
-        parsed.casesPlayedToday = getDefaultState().casesPlayedToday;
+    try {
+      const stored = localStorage.getItem(storageKey);
+      
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        // Reset daily limit if it's a new day
+        if (parsed.lastPlayedDate && !isToday(new Date(parsed.lastPlayedDate))) {
+          parsed.casesPlayedToday = getDefaultState().casesPlayedToday;
+        }
+        // Ensure title is set for older saves
+        if (!parsed.title) {
+          parsed.title = getTitleForXp(parsed.xp || 0);
+        }
+        if (!parsed.playedCases) {
+          parsed.playedCases = [];
+        }
+        if (!parsed.completedCombinations) {
+          parsed.completedCombinations = {};
+        }
+        setState(parsed);
+      } else {
+        setState(getDefaultState());
       }
-      // Ensure title is set for older saves
-      if (!parsed.title) {
-        parsed.title = getTitleForXp(parsed.xp || 0);
-      }
-      if (!parsed.playedCases) {
-        parsed.playedCases = [];
-      }
-      if (!parsed.completedCombinations) {
-        parsed.completedCombinations = {};
-      }
-      setState(parsed);
-    } else {
+    } catch (error) {
+      console.error("Error loading game state:", error);
       setState(getDefaultState());
+    } finally {
+      setLoaded(true);
     }
-    setLoaded(true);
   }, [userEmail]);
 
   const addXp = useCallback((baseXp: number, difficulty: Difficulty, correct: boolean, specialty: Specialty, caseId?: string) => {
