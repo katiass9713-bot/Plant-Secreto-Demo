@@ -16,36 +16,35 @@ function getBankCases(specialty: Specialty, difficulty: Difficulty, playedCases:
   const specLower = specialty.toLowerCase();
   
   let filtered = parsedBank.filter(row => {
-    const caseId = `bank-${row.id}`;
+    const caseId = `bank-${row.ID}`;
     if (playedCases.includes(caseId)) return false;
 
-    const area = (row.area || '').toLowerCase();
-    const subarea = (row.subarea || '').toLowerCase();
-    const tema = (row.tema || '').toLowerCase();
+    const especialidade = (row.Especialidade || '').toLowerCase();
+    const resumo = (row.Resumo || '').toLowerCase();
 
     if (specLower === 'urgência e emergência' || specLower === 'emergência') {
-      return area.includes('emergência') || tema.includes('emergência');
+      return especialidade.includes('emergência') || especialidade.includes('urgência');
     }
     if (specLower === 'uti adulto') {
-      return area.includes('uti') || tema.includes('uti');
+      return especialidade.includes('uti');
     }
-    if (specLower === 'obstetrícia/saúde da mulher' || specLower === 'saúde da mulher') {
-      return area.includes('mulher') || tema.includes('mulher') || area.includes('obstetrícia') || tema.includes('obstetrícia');
+    if (specLower === 'saúde da mulher') {
+      return especialidade.includes('mulher') || especialidade.includes('obstetrícia');
     }
     if (specLower === 'aps') {
-      return area.includes('aps') || tema.includes('aps') || area.includes('atenção primária');
+      return especialidade.includes('aps') || especialidade.includes('atenção primária');
     }
     if (specLower === 'doenças tropicais') {
-      return area === 'doenças tropicais' || area.includes('tropical') || tema.includes('tropical') || tema.includes('tuberculose') || tema.includes('hanseníase') || tema.includes('dengue') || tema.includes('zika') || tema.includes('chikungunya') || tema.includes('febre amarela') || tema.includes('oropouche') || tema.includes('chagas') || tema.includes('toxoplasmose') || tema.includes('malária') || tema.includes('leishmaniose');
+      return especialidade === 'doenças tropicais' || especialidade.includes('tropical') || resumo.includes('tropical') || resumo.includes('tuberculose') || resumo.includes('hanseníase') || resumo.includes('dengue') || resumo.includes('zika') || resumo.includes('chikungunya') || resumo.includes('febre amarela') || resumo.includes('oropouche') || resumo.includes('chagas') || resumo.includes('toxoplasmose') || resumo.includes('malária') || resumo.includes('leishmaniose');
     }
     if (specLower === 'feridas/estomaterapia') {
-      return area.includes('feridas') || tema.includes('feridas') || area.includes('estomaterapia');
+      return especialidade.includes('feridas') || resumo.includes('feridas') || especialidade.includes('estomaterapia');
     }
     
-    return area.includes(specLower) || subarea.includes(specLower) || tema.includes(specLower);
+    return especialidade.includes(specLower) || resumo.includes(specLower);
   });
 
-  // Se não houver mais casos disponíveis para a especialidade (mesmo ignorando dificuldade), retornar um array vazio para forçar o uso da inteligência artificial inédita.
+  // Se não houver mais casos disponíveis para a especialidade, retornar vazio
   if (filtered.length === 0) {
     return [];
   }
@@ -54,28 +53,32 @@ function getBankCases(specialty: Specialty, difficulty: Difficulty, playedCases:
     'fácil': 'Fácil',
     'médio': 'Médio',
     'difícil': 'Difícil',
-    'expert': 'Difícil'
+    'expert': 'Expert'
   };
   const targetDiff = diffMap[difficulty] || 'Médio';
   
   const diffFiltered = filtered.filter(row => {
-    const rowDiff = (row.nivel || '').trim();
-    return rowDiff === targetDiff || (difficulty === 'expert' && rowDiff === 'Difícil');
+    const rowDiff = (row.Dificuldade || '').trim();
+    // Expert no banco pode ser "Expert" ou "Difícil"
+    if (difficulty === 'expert') {
+      return rowDiff === 'Expert' || rowDiff === 'Difícil';
+    }
+    return rowDiff.toLowerCase() === targetDiff.toLowerCase();
   });
 
-  // If we have cases for the specific difficulty, return them.
-  // Otherwise, return the cases for the specialty regardless of difficulty (to keep using bank if at least one exists).
+  // Se tivermos casos para a dificuldade específica, retornamos eles.
+  // Caso contrário, retornamos os casos da especialidade idependente da dificuldade (melhor que dar erro de demanda).
   return diffFiltered.length > 0 ? diffFiltered : filtered;
 }
 
 function mapCsvToClinicalCase(row: any, specialty: string, difficulty: string): ClinicalCase {
   const options = [];
   const letters = ['A', 'B', 'C', 'D', 'E'];
-  const correctLetter = (row.resposta_correta || '').trim().toUpperCase();
-  const enunciado = row.enunciado || '';
+  const correctLetter = (row['Resposta Correta'] || '').trim().toUpperCase();
+  const enunciado = row.Enunciado || '';
 
   for (const letter of letters) {
-    const text = row[`alternativa_${letter.toLowerCase()}`];
+    const text = row[`Alternativa ${letter}`];
     if (text && text.trim() !== '') {
       const isCorrect = letter === correctLetter;
       // Expande a justificativa das alternativas para dar um feedback bem mais rico
