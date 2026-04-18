@@ -14,7 +14,7 @@ export interface Medication {
 }
 
 export const medications: Medication[] = [
-{
+  {
     id: "med-acido-folico",
     name: "Ácido Fólico",
     drugClass: "Vitamina (B9)",
@@ -35,7 +35,7 @@ export const medications: Medication[] = [
     antidoteOrToxicity: "Baixa toxicidade",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-adrenalina-geral",
 name: "Adrenalina",
 drugClass: "Agonista adrenérgico (α e β)",
@@ -56,7 +56,7 @@ nursingCautions: [
 antidoteOrToxicity: "Fentolamina 5–10 mg diluída em 10 mL SF infiltrada localmente no extravasamento; suporte hemodinâmico em toxicidade",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-age",
     name: "AGE (Ácidos Graxos Essenciais)",
     drugClass: "Regenerador cutâneo",
@@ -74,7 +74,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Não aplicável",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-alginato-calcio",
     name: "Alginato de Cálcio",
     drugClass: "Cobertura absorvente",
@@ -93,26 +93,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-alprazolam-geral",
-        name: "Alprazolam",
-        drugClass: "Benzodiazepínico",
-        indications: [
+    id: "med-alprazolam-geral",
+    name: "Alprazolam",
+    drugClass: "Benzodiazepínico",
+    indications: [
       "Transtorno de ansiedade",
       "Ataques de pânico"
     ],
-        dosage: "Adultos: 0,25 a 0,5 mg via oral, três vezes ao dia.",
-        preparation: "Comprimidos de 0,25mg, 0,5mg ou conforme prescrição.",
-        administration: "Via oral; dose aumentada gradualmente conforme tolerado.",
-        nursingCautions: [
+    dosage: "Adultos: 0,25 a 0,5 mg via oral, três vezes ao dia.",
+    preparation: "Comprimidos de 0,25mg, 0,5mg ou conforme prescrição.",
+    administration: "Via oral; dose aumentada gradualmente conforme tolerado.",
+    nursingCautions: [
       "Alto potencial para causar sedação, sonolência e dependência.",
       "Pode interagir com antidepressivos e antipsicóticos, aumentando a depressão respiratória.",
       "Evitar uso prolongado sem supervisão rigorosa."
     ],
-        antidoteOrToxicity: "Antídoto: Flumazenil; suporte ventilatório em superdosagem.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Antídoto: Flumazenil; suporte ventilatório em superdosagem.",
+    rarity: "Alto Risco"
   },
-{
+  {
 id: "med-amiodarona-geral",
 name: "Amiodarona",
 drugClass: "Antiarrítmico classe III",
@@ -133,7 +132,7 @@ nursingCautions: [
 antidoteOrToxicity: "Não há antídoto específico; tratar arritmias e suporte clínico",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-mental-06",
     name: "Amitriptilina",
     drugClass: "Antidepressivo tricíclico",
@@ -157,7 +156,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação grave: arritmias, convulsões, coma. Tratamento: suporte intensivo e bicarbonato de sódio IV.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-amoxicilina",
     name: "Amoxicilina",
     drugClass: "Antibiótico penicilínico",
@@ -180,7 +179,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Antídoto: suporte em caso de alergia grave (adrenalina); reações: rash, anafilaxia",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-neo-03",
     name: "Ampicilina",
     drugClass: "Antibiótico betalactâmico (penicilina)",
@@ -203,7 +202,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: convulsões (raro, doses elevadas). Tratamento de suporte.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-atenolol",
     name: "Atenolol",
     drugClass: "Betabloqueador seletivo (β1)",
@@ -227,26 +226,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-atorvastatina-prev",
-        name: "Atorvastatina",
-        drugClass: "Estatina / Antilipêmico",
-        indications: [
+    id: "med-atorvastatina-prev",
+    name: "Atorvastatina",
+    drugClass: "Estatina / Antilipêmico",
+    indications: [
       "Redução de níveis de colesterol LDL e triglicerídeos",
       "Prevenção de doenças cardiovasculares em pacientes de alto risco"
     ],
-        dosage: "Adultos: 10 mg a 80 mg via oral, uma vez ao dia.",
-        preparation: "Comprimidos orais.",
-        administration: "Via oral, geralmente administrada à noite para melhor eficácia.",
-        nursingCautions: [
+    dosage: "Adultos: 10 mg a 80 mg via oral, uma vez ao dia.",
+    preparation: "Comprimidos orais.",
+    administration: "Via oral, geralmente administrada à noite para melhor eficácia.",
+    nursingCautions: [
       "Monitorar sintomas de dor muscular ou fraqueza (risco de miopatia).",
       "Avaliar níveis de enzimas hepáticas periodicamente.",
       "Interação com antibióticos macrolídeos pode elevar o risco de efeitos musculares graves."
     ],
-        antidoteOrToxicity: "Suporte clínico; suspensão imediata se houver sinais de rabdomiólise.",
-        rarity: "Baixo Risco"
-  }
+    antidoteOrToxicity: "Suporte clínico; suspensão imediata se houver sinais de rabdomiólise.",
+    rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-azitromicina-aps",
     name: "Azitromicina",
     drugClass: "Macrolídeo",
@@ -266,7 +264,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-bacitracina",
     name: "Bacitracina",
     drugClass: "Antibiótico tópico",
@@ -284,7 +282,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Baixa toxicidade",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-betametasona-obs",
     name: "Betametasona",
     drugClass: "Corticosteroide",
@@ -307,26 +305,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-bromazepam-ans",
-        name: "Bromazepam",
-        drugClass: "Benzodiazepínico / Tranquilizante",
-        indications: [
+    id: "med-bromazepam-ans",
+    name: "Bromazepam",
+    drugClass: "Benzodiazepínico / Tranquilizante",
+    indications: [
       "Tratamento da ansiedade e distúrbios relacionados",
       "Promoção de relaxamento muscular e sedação"
     ],
-        dosage: "Adultos: 1,5 mg a 6 mg por dia, divididos em duas ou três doses.",
-        preparation: "Comprimidos orais.",
-        administration: "Via oral.",
-        nursingCautions: [
+    dosage: "Adultos: 1,5 mg a 6 mg por dia, divididos em duas ou três doses.",
+    preparation: "Comprimidos orais.",
+    administration: "Via oral.",
+    nursingCautions: [
       "Causa sonolência, tonturas e problemas de coordenação motora.",
       "Risco de dependência física e psicológica em uso prolongado.",
       "Interage com álcool e outros depressores do sistema nervoso central."
     ],
-        antidoteOrToxicity: "Antídoto: Flumazenil.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Antídoto: Flumazenil.",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-budesonida",
     name: "Budesonida",
     drugClass: "Corticosteroide inalatório",
@@ -350,26 +347,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-bupivacaina-anes",
-        name: "Bupivacaína",
-        drugClass: "Anestésico local",
-        indications: [
+    id: "med-bupivacaina-anes",
+    name: "Bupivacaína",
+    drugClass: "Anestésico local",
+    indications: [
       "Anestesia em procedimentos cirúrgicos",
       "Analgesia durante o trabalho de parto"
     ],
-        dosage: "Dose variável conforme o procedimento e concentração (0,25% a 0,5%).",
-        preparation: "Solução injetável (isobárica, hiperbárica ou pura).",
-        administration: "Vias subcutânea, intramuscular, intravenosa ou peridural.",
-        nursingCautions: [
+    dosage: "Dose variável conforme o procedimento e concentração (0,25% a 0,5%).",
+    preparation: "Solução injetável (isobárica, hiperbárica ou pura).",
+    administration: "Vias subcutânea, intramuscular, intravenosa ou peridural.",
+    nursingCautions: [
       "Risco elevado de convulsões e parada cardíaca se houver injeção intravascular inadvertida.",
       "Monitorar sinais vitais e nível de consciência continuamente.",
       "Uso cauteloso em pacientes com problemas hepáticos ou cardíacos."
     ],
-        antidoteOrToxicity: "Suporte hemodinâmico imediate; emulsão lipídica (protocolo de resgate).",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Suporte hemodinâmico imediate; emulsão lipídica (protocolo de resgate).",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-ps-18",
     name: "Butilbrometo de Escopolamina (Buscopan)",
     drugClass: "Antiespasmódico anticolinérgico",
@@ -392,7 +388,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: efeitos anticolinérgicos intensos (taquicardia, delírio). Tratamento de suporte.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-neo-02",
     name: "Cafeína Citrato",
     drugClass: "Estimulante do SNC (metilxantina)",
@@ -414,7 +410,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: taquicardia, irritabilidade, vômitos. Tratamento de suporte.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-captopril-geral",
     name: "Captopril",
     drugClass: "Inibidor da ECA (IECA)",
@@ -437,27 +433,26 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-carbamazepina-anticon",
-        name: "Carbamazepina",
-        drugClass: "Anticonvulsivante / Estabilizador de humor",
-        indications: [
+    id: "med-carbamazepina-anticon",
+    name: "Carbamazepina",
+    drugClass: "Anticonvulsivante / Estabilizador de humor",
+    indications: [
       "Epilepsia",
       "Neuralgia do trigêmeo",
       "Transtorno bipolar"
     ],
-        dosage: "Adultos: Inicial de 200 mg a 400 mg por dia, dividida em várias doses.",
-        preparation: "Comprimidos ou suspensão oral.",
-        administration: "Via oral.",
-        nursingCautions: [
+    dosage: "Adultos: Inicial de 200 mg a 400 mg por dia, dividida em várias doses.",
+    preparation: "Comprimidos ou suspensão oral.",
+    administration: "Via oral.",
+    nursingCautions: [
       "Interação com Diltiazem e Verapamil pode aumentar as concentrações plasmáticas da droga.",
       "Monitorar efeitos colaterais como sonolência, visão dupla e ataxia.",
       "Pode diminuir a eficácia de anticoagulantes orais."
     ],
-        antidoteOrToxicity: "Monitoramento de níveis séricos e suporte sintomático em toxicidade.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Monitoramento de níveis séricos e suporte sintomático em toxicidade.",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-carbonato-calcio",
     name: "Carbonato de Cálcio",
     drugClass: "Suplemento mineral",
@@ -477,7 +472,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Hipercalcemia em excesso",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-mental-05",
     name: "Carbonato de Lítio",
     drugClass: "Estabilizador de humor",
@@ -499,7 +494,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: tremor, ataxia, confusão, convulsões. Tratamento: hidratação e, em casos graves, hemodiálise.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-cefalexina-aps",
     name: "Cefalexina",
     drugClass: "Cefalosporina de 1ª geração",
@@ -520,27 +515,26 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-cefepime-antib",
-        name: "Cefepime (Cefeprime)",
-        drugClass: "Antibiótico (Cefalosporina de 4ª geração)",
-        indications: [
+    id: "med-cefepime-antib",
+    name: "Cefepime (Cefeprime)",
+    drugClass: "Antibiótico (Cefalosporina de 4ª geração)",
+    indications: [
       "Pneumonia e infecções intra-abdominais",
       "Infecções do trato urinário e de pele",
       "Sepse e infecções graves"
     ],
-        dosage: "Adultos: 1 g a 2 g via intravenosa ou intramuscular a cada 8 a 12 horas.",
-        preparation: "Reconstituir 1g com 10mL AD (volume final 11,11mL). Diluir em 100mL SF ou SG.",
-        administration: "Intravenosa (infusão de 30 min) ou Intramuscular profunda.",
-        nursingCautions: [
+    dosage: "Adultos: 1 g a 2 g via intravenosa ou intramuscular a cada 8 a 12 horas.",
+    preparation: "Reconstituir 1g com 10mL AD (volume final 11,11mL). Diluir em 100mL SF ou SG.",
+    administration: "Intravenosa (infusão de 30 min) ou Intramuscular profunda.",
+    nursingCautions: [
       "Estabilidade de 24 horas em temperatura ambiente e 7 dias sob refrigeração.",
       "Monitorar rigorosamente a função renal em pacientes idosos.",
       "Observar risco de diarreia por Clostridioides difficile."
     ],
-        antidoteOrToxicity: "Suporte em reações anafiláticas; ajuste de dose por depuração de creatinina.",
-        rarity: "Moderado Risco"
-  }
+    antidoteOrToxicity: "Suporte em reações anafiláticas; ajuste de dose por depuração de creatinina.",
+    rarity: "Moderado Risco"
   },
-{
+  {
     id: "med-ceftriaxona-obs",
     name: "Ceftriaxona",
     drugClass: "Antibiótico cefalosporina de 3ª geração",
@@ -563,7 +557,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; reações: alergias, diarreia, colite associada a antibióticos",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-cetoprofeno",
     name: "Cetoprofeno",
     drugClass: "AINE (anti-inflamatório não esteroidal)",
@@ -585,7 +579,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Não há antídoto específico; suporte clínico em intoxicação",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-ps-19",
     name: "Cimetidina",
     drugClass: "Antagonista dos receptores H2 (antiulceroso)",
@@ -608,7 +602,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: confusão, arritmias raras. Tratamento de suporte.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-clindamicina-aps",
     name: "Clindamicina",
     drugClass: "Antibiótico lincosamida",
@@ -628,7 +622,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico",
     rarity: "Moderado Risco"
   },
-{
+  {
     id: "med-mental-09",
     name: "Clonazepam",
     drugClass: "Benzodiazepínico de longa duração",
@@ -653,26 +647,25 @@ rarity: "Alto Risco"
     rarity: "Alto Risco"
   },
   {
-      id: "med-clopidogrel-antiplag",
-        name: "Clopidogrel",
-        drugClass: "Antiagregante plaquetário",
-        indications: [
+    id: "med-clopidogrel-antiplag",
+    name: "Clopidogrel",
+    drugClass: "Antiagregante plaquetário",
+    indications: [
       "Prevenção de eventos trombóticos (infarto, AVC)",
       "Síndrome Coronariana Aguda (SCA)"
     ],
-        dosage: "Manutenção: 75 mg via oral, uma vez ao dia. Carga: 300 a 600 mg.",
-        preparation: "Comprimidos de 75 mg.",
-        administration: "Via oral.",
-        nursingCautions: [
+    dosage: "Manutenção: 75 mg via oral, uma vez ao dia. Carga: 300 a 600 mg.",
+    preparation: "Comprimidos de 75 mg.",
+    administration: "Via oral.",
+    nursingCautions: [
       "O Omeprazol pode reduzir significativamente a ação antiplaquetária da droga.",
       "Monitorar sinais de sangramento oculto ou visível.",
       "Pode causar desconforto abdominal e cefaleia."
     ],
-        antidoteOrToxicity: "Transfusão de plaquetas em casos de hemorragia grave por toxicidade.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Transfusão de plaquetas em cases de hemorragia grave por toxicidade.",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-ps-20",
     name: "Dexametasona",
     drugClass: "Corticosteroide potente de longa duração",
@@ -696,7 +689,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Uso prolongado: síndrome de Cushing, imunossupressão. Suspensão deve ser gradual.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-diclofenaco",
     name: "Diclofenaco Sódico",
     drugClass: "AINE (anti-inflamatório não esteroidal)",
@@ -720,26 +713,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-digoxina-ic",
-        name: "Digoxina",
-        drugClass: "Glicosídeo cardíaco / Inotrópico",
-        indications: [
+    id: "med-digoxina-ic",
+    name: "Digoxina",
+    drugClass: "Glicosídeo cardíaco / Inotrópico",
+    indications: [
       "Insuficiência cardíaca congestiva",
       "Controle de arritmias (fibrilação atrial)"
     ],
-        dosage: "Adultos: 0,125 mg a 0,25 mg via oral uma vez ao dia.",
-        preparation: "Comprimidos ou solução injetável.",
-        administration: "Via oral (absorção em 2-3h) ou Intravenosa lenta.",
-        nursingCautions: [
+    dosage: "Adultos: 0,125 mg a 0,25 mg via oral uma vez ao dia.",
+    preparation: "Comprimidos ou solução injetável.",
+    administration: "Via oral (absorção em 2-3h) ou Intravenosa lenta.",
+    nursingCautions: [
       "Amiodarona pode elevar a concentração sérica em até 100%, exigindo redução da dose.",
       "Monitorar sinais de intoxicação (náuseas, vômitos, visão amarelada e bradicardia).",
       "A hipocalemia aumenta o risco de toxicidade digitálica."
     ],
-        antidoteOrToxicity: "Anticorpos específicos contra digoxina (DigiFab) em toxicidade grave.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Anticorpos específicos contra digoxina (DigiFab) em toxicidade grave.",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-dipirona-obs",
     name: "Dipirona",
     drugClass: "Analgésico e antipirético",
@@ -762,7 +754,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; raramente pode causar agranulocitose e choque anafilático",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-dipirona-geral-aps",
     name: "Dipirona (Metamizol)",
     drugClass: "Analgésico e antitérmico",
@@ -784,7 +776,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; tratar suporte hemodinâmico",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-contr-05",
     name: "DIU de Cobre",
     drugClass: "Contraceptivo não hormonal intrauterino",
@@ -807,26 +799,25 @@ rarity: "Alto Risco"
     rarity: "Baixo Risco"
   },
   {
-      id: "med-dopamina-upa",
-        name: "Dopamina (Cloridrato)",
-        drugClass: "Agonista adrenérgico e dopaminérgico",
-        indications: [
+    id: "med-dopamina-upa",
+    name: "Dopamina (Cloridrato)",
+    drugClass: "Agonista adrenérgico e dopaminérgico",
+    indications: [
       "Choque circulatório (séptico, cardiogênico)",
       "Hipotensão grave ou insuficiência renal funcional"
     ],
-        dosage: "Dose inicial usual: 2 a 5 mcg/kg/min, ajustada conforme resposta hemodinâmica.",
-        preparation: "Diluir 200 mg (1 ampola) em 250 mL de SG 5% ou SF.",
-        administration: "Exclusivamente via intravenosa através de bomba de infusão contínua.",
-        nursingCautions: [
+    dosage: "Dose inicial usual: 2 a 5 mcg/kg/min, ajustada conforme resposta hemodinâmica.",
+    preparation: "Diluir 200 mg (1 ampola) em 250 mL de SG 5% ou SF.",
+    administration: "Exclusivamente via intravenosa através de bomba de infusão contínua.",
+    nursingCautions: [
       "Não administrar puro; risco de arritmias cardíacas e taquicardia.",
       "Extravasamento causa necrose tecidual grave (usar veia de grosso calibre).",
       "Monitorar rigorosamente a pressão arterial e a diurese."
     ],
-        antidoteOrToxicity: "Fentolamina infiltrada localmente em caso de extravasamento.",
-        rarity: "Alto Risco"
-  }
+    antidoteOrToxicity: "Fentolamina infiltrada localmente em caso de extravasamento.",
+    rarity: "Alto Risco"
   },
-{
+  {
     id: "med-ergometrina-obs",
     name: "Ergometrina",
     drugClass: "Uterotônico (alcaloide do ergot)",
@@ -848,7 +839,29 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: hipertensão grave, náuseas, vômitos, vasoespasmo",
     rarity: "Moderado Risco"
   },
-{
+  {
+  id: "med-espironolactona-geral",
+  name: "Espironolactona",
+  drugClass: "Diurético poupador de potássio (antagonista da aldosterona)",
+  indications: [
+    "Insuficiência cardíaca",
+    "Hipertensão essencial",
+    "Edema e ascite",
+    "Hiperaldosteronismo primário"
+  ],
+  dosage: "Adultos: 25 mg a 200 mg via oral, dependendo da indicação.",
+  preparation: "Comprimidos orais.",
+  administration: "Via oral, preferencialmente com alimentos.",
+  nursingCautions: [
+    "Monitorar níveis de potássio (risco de hipercalemia).",
+    "Avaliar função renal.",
+    "Observar sinais de desidratação e hipotensão.",
+    "Monitorar ginecomastia (efeito colateral em homens)."
+  ],
+  antidoteOrToxicity: "Suporte clínico; correção de distúrbios eletrolíticos.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-etilefrina",
     name: "Etilefrina (Efortil)",
     drugClass: "Agonista adrenérgico (vasopressor)",
@@ -870,7 +883,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: hipertensão, taquicardia, arritmias",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-contr-01",
     name: "Etinilestradiol + Levonorgestrel",
     drugClass: "Contraceptivo hormonal combinado oral",
@@ -893,7 +906,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Superdose: náuseas e vômitos. Risco principal é tromboembolismo em uso prolongado.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-contr-04",
     name: "Etonogestrel (Implante Subdérmico)",
     drugClass: "Contraceptivo hormonal de longa duração (progestagênio)",
@@ -915,7 +928,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Eventos: sangramento irregular, cefaleia. Conduta: manejo clínico ou retirada do implante.",
     rarity: "Moderado Risco"
   },
-{
+  {
     id: "med-neuro-01",
     name: "Fenitoína",
     drugClass: "Anticonvulsivante (bloqueador de canais de sódio)",
@@ -937,7 +950,49 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Intoxicação: ataxia, nistagmo, confusão, arritmias. Tratamento de suporte.",
     rarity: "Alto Risco"
   },
-{
+  {
+  id: "med-fenobarbital-geral",
+  name: "Fenobarbital",
+  drugClass: "Anticonvulsivante (Barbitúrico)",
+  indications: [
+    "Crises convulsivas tônico-clônicas",
+    "Status epilepticus (como alternativa)",
+    "Sedação pré-operatória"
+  ],
+  dosage: "Adultos: 100 mg a 320 mg/dia via oral ou IV; Crianças: conforme peso.",
+  preparation: "Comprimidos e soluções injetáveis.",
+  administration: "Via oral, IM ou IV lento (máximo 60 mg/min).",
+  nursingCautions: [
+    "Monitorar depressão respiratória em administração IV.",
+    "Observar sedação excessiva e sonolência.",
+    "Não suspender abruptamente (risco de convulsões de rebote).",
+    "Monitorar sinais vitais e nível de consciência."
+  ],
+  antidoteOrToxicity: "Suporte respiratório e hemodinâmico; carvão ativado em intoxicação aguda.",
+  rarity: "Alto Risco"
+},
+  {
+  id: "med-flecainida-geral",
+  name: "Flecainida",
+  drugClass: "Antiarrítmico classe Ic",
+  indications: [
+    "Fibrilação atrial persistente",
+    "Taquicardia supraventricular paroxística",
+    "Arritmias ventriculares graves"
+  ],
+  dosage: "Adultos: 50 mg a 150 mg via oral, duas vezes ao dia.",
+  preparation: "Comprimidos orais.",
+  administration: "Via oral.",
+  nursingCautions: [
+    "Risco pró-arrítmico elevado em pacientes com doenças cardíacas estruturais.",
+    "Monitorar ECG (intervalo PR e QRS).",
+    "Uso restrito a pacientes sem falência cardíaca.",
+    "Monitorar níveis plasmáticos se possível."
+  ],
+  antidoteOrToxicity: "Suporte avançado de vida e controle de arritmias.",
+  rarity: "Alto Risco"
+},
+  {
     id: "med-fluconazol-aps",
     name: "Fluconazol",
     drugClass: "Antifúngico triazólico",
@@ -957,7 +1012,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-furosemida-crit",
 name: "Furosemida",
 drugClass: "Diurético de alça (inibe cotransportador Na+/K+/2Cl- na alça de Henle)",
@@ -981,7 +1036,28 @@ nursingCautions: [
 antidoteOrToxicity: "Não há antídoto específico; corrigir distúrbios hidroeletrolíticos e suspender ou reduzir dose conforme necessidade",
 rarity: "Baixo Risco"
 },
-{
+  {
+  id: "med-gabapentina-geral",
+  name: "Gabapentina",
+  drugClass: "Anticonvulsivante / Tratamento de dor neuropática",
+  indications: [
+    "Epilepsia focal",
+    "Dor neuropática (ex: neuralgia pós-herpética)",
+    "Síndrome das pernas inquietas"
+  ],
+  dosage: "Inicial: 300 mg VO no dia 1, aumentando gradualmente até 900–3600 mg/dia.",
+  preparation: "Cápsulas ou comprimidos.",
+  administration: "Via oral, independente das refeições.",
+  nursingCautions: [
+    "Observar sonolência e tontura.",
+    "Monitorar ideação suicida.",
+    "Ajustar dose em pacientes com insuficiência renal.",
+    "Não suspender abruptamente."
+  ],
+  antidoteOrToxicity: "Hemodiálise em casos de superdosagem grave com insuficiência renal.",
+  rarity: "Baixo Risco"
+},
+  {
 id: "med-gluconato-calcio-geral",
 name: "Gluconato de Cálcio 10%",
 drugClass: "Repositor eletrolítico (cálcio)",
@@ -1005,7 +1081,7 @@ nursingCautions: [
 antidoteOrToxicity: "Em hipercalcemia induzida: hidratação e diuréticos; suporte clínico conforme necessidade",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-guaco",
     name: "Guaco",
     drugClass: "Fitoterápico expectorante",
@@ -1025,7 +1101,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Baixa toxicidade",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-haloperidol-geral",
 name: "Haloperidol",
 drugClass: "Antipsicótico típico (bloqueador dopaminérgico D2)",
@@ -1049,7 +1125,7 @@ nursingCautions: [
 antidoteOrToxicity: "Sintomas extrapiramidais: biperideno ou difenidramina; em arritmias, suporte avançado",
 rarity: "Alto Risco"
 },
-{
+  {
 id: "med-heparina-crit",
 name: "Heparina não fracionada",
 drugClass: "Anticoagulante (potencializa antitrombina III)",
@@ -1073,7 +1149,7 @@ nursingCautions: [
 antidoteOrToxicity: "Protamina: 1 mg neutraliza aproximadamente 100 UI de heparina (máx. 50 mg); administrar lentamente para evitar hipotensão",
 rarity: "Baixo Risco"
 },
-{
+  {
     id: "med-hidralazina-obs-crise",
     name: "Hidralazina",
     drugClass: "Vasodilatador arterial direto",
@@ -1095,7 +1171,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; efeitos: hipotensão, taquicardia, cefaleia",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-hidroclorotiazida",
     name: "Hidroclorotiazida",
     drugClass: "Diurético tiazídico",
@@ -1117,7 +1193,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: hipocalemia, hiponatremia, desidratação",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-ps-21",
     name: "Hidrocortisona",
     drugClass: "Corticosteroide (glicocorticoide e mineralocorticoide)",
@@ -1141,7 +1217,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Uso prolongado: síndrome de Cushing, retenção hídrica, hiperglicemia. Retirada gradual.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-hidrogel",
     name: "Hidrogel",
     drugClass: "Cobertura para feridas",
@@ -1159,7 +1235,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Não aplicável",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-ibuprofeno",
     name: "Ibuprofeno",
     drugClass: "Anti-inflamatório não esteroidal (AINE)",
@@ -1182,7 +1258,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: gastrite, sangramento GI, insuficiência renal",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-insulina-regular-crit",
 name: "Insulina Regular",
 drugClass: "Hormônio hipoglicemiante de ação rápida",
@@ -1206,7 +1282,7 @@ nursingCautions: [
 antidoteOrToxicity: "Hipoglicemia: glicose IV (SG 50% 20–50 mL) ou SG 10% contínuo; monitorização intensiva até estabilização",
 rarity: "Baixo Risco"
 },
-{
+  {
     id: "med-ipratropio",
     name: "Ipratrópio",
     drugClass: "Anticolinérgico broncodilatador de curta duração",
@@ -1228,7 +1304,28 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Raramente tóxico; em superdose → suporte clínico",
     rarity: "Baixo Risco"
   },
-{
+  {
+  id: "med-itraconazol-geral",
+  name: "Itraconazol",
+  drugClass: "Antifúngico triazólico",
+  indications: [
+    "Micoses sistêmicas (blastomicose, histoplasmose)",
+    "Dermatofitoses severas",
+    "Candidíase oral ou esofágica"
+  ],
+  dosage: "Adultos: 100 mg a 400 mg/dia via oral, conforme a infecção.",
+  preparation: "Cápsulas orais.",
+  administration: "Via oral, preferencialmente após refeições para absorção ideal.",
+  nursingCautions: [
+    "Monitorar função hepática em uso prolongado.",
+    "Observar sinais de insuficiência cardíaca (pode ter efeito inotrópico negativo).",
+    "Numerosas interações medicamentosas via CYP3A4.",
+    "Avaliar sinais de hipersensibilidade."
+  ],
+  antidoteOrToxicity: "Suporte clínico em superdosagem.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-neuro-03",
     name: "Levetiracetam",
     drugClass: "Anticonvulsivante (modulador da proteína SV2A)",
@@ -1251,7 +1348,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Intoxicação: sonolência, tontura, agitação. Tratamento de suporte.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-contr-03",
     name: "Levonorgestrel (Pílula do Dia Seguinte)",
     drugClass: "Contraceptivo de emergência (progestagênio)",
@@ -1273,7 +1370,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Baixo risco de toxicidade. Efeitos comuns: náusea, cefaleia, alteração do ciclo.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-levotiroxina",
     name: "Levotiroxina",
     drugClass: "Hormônio tireoidiano sintético (T4)",
@@ -1296,7 +1393,28 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: taquicardia, insônia, perda de peso (hipertireoidismo iatrogênico)",
     rarity: "Baixo Risco"
   },
-{
+  {
+  id: "med-lidocaina-geral",
+  name: "Lidocaína",
+  drugClass: "Anestésico local / Antiarrítmico classe Ib",
+  indications: [
+    "Anestesia local ou regional",
+    "Arritmias ventriculares agudas (IAM, cirurgia cardíaca)",
+    "Pós-estabilização de arritmias em PCR"
+  ],
+  dosage: "Antiarrítmico: 1–1,5 mg/kg IV bolus, seguido de infusão 1–4 mg/min.",
+  preparation: "Frascos com ou sem vasoconstritor (adrenalina). Gel ou spray tópico.",
+  administration: "Infiltração local, sprays, IV bolus ou infusão contínua.",
+  nursingCautions: [
+    "Monitorar sinais de toxicidade do SNC (tremores, convulsões, confusão).",
+    "Avaliar monitorização cardíaca contínua em uso IV.",
+    "Cuidado para não administrar formulação com adrenalina via IV.",
+    "Monitorar níveis de consciência e fala arrastada."
+  ],
+  antidoteOrToxicity: "Emulsão lipídica 20% IV para intoxicação sistêmica grave por anestésicos locais.",
+  rarity: "Alto Risco"
+},
+  {
     id: "med-losartana",
     name: "Losartana",
     drugClass: "Antagonista do receptor de angiotensina II (BRA)",
@@ -1336,9 +1454,8 @@ rarity: "Baixo Risco"
     ],
         antidoteOrToxicity: "Suporte clínico em casos de hipotensão grave; expansão de volume.",
         rarity: "Baixo Risco"
-  }
   },
-{
+  {
     id: "med-neuro-02",
     name: "Manitol",
     drugClass: "Diurético osmótico",
@@ -1361,7 +1478,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Complicações: edema pulmonar, desequilíbrio eletrolítico. Tratamento de suporte.",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-contr-02",
     name: "Medroxiprogesterona (Acetato de Depo)",
     drugClass: "Contraceptivo hormonal injetável (progestagênio)",
@@ -1383,7 +1500,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Eventos adversos: sangramento irregular, ganho de peso. Tratamento sintomático.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-metildopa-gest-agudo",
     name: "Metildopa",
     drugClass: "Anti-hipertensivo (agonista alfa-2 central)",
@@ -1405,7 +1522,52 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; efeitos: sedação, hipotensão, elevação de enzimas hepáticas",
     rarity: "Baixo Risco"
   },
-{
+  {
+  id: "med-metotrexato-geral",
+  name: "Metotrexato",
+  drugClass: "Antirreumático modificador da doença (ARMD) / Antineoplásico",
+  indications: [
+    "Artrite reumatoide",
+    "Psoríase severa",
+    "Leucemias e linfomas",
+    "Gravidez ectópica"
+  ],
+  dosage: "Artrite: 7,5 mg a 25 mg VO/IM uma vez por semana.",
+  preparation: "Comprimidos e frascos injetáveis.",
+  administration: "Via oral, IM ou IV. Crítico: dose semal para artrite/psoríase.",
+  nursingCautions: [
+    "Monitorar hemograma completo (risco de mielossupressão).",
+    "Avaliar função hepática e renal.",
+    "Orientar uso de ácido fólico para reduzir toxicidade.",
+    "Altamente teratogênico; contraindicado na gestação.",
+    "Observar estomatite e queda de cabelo."
+  ],
+  antidoteOrToxicity: "Leucovorin (Folinato de Cálcio) como resgate em doses tóxicas.",
+  rarity: "Alto Risco"
+},
+  {
+  id: "med-metronidazol-geral",
+  name: "Metronidazol",
+  drugClass: "Antibiótico nitroimidazólico / Antiparasitário",
+  indications: [
+    "Tricomoníase",
+    "Amebíase e giardíase",
+    "Vaginose bacteriana",
+    "Infecções por anaeróbios"
+  ],
+  dosage: "Adultos: 250 mg a 500 mg VO/IV de 8/8h ou 12/12h conforme indicação.",
+  preparation: "Comprimidos, géis vaginais e solução injetável IV (bolsas prontas).",
+  administration: "Via oral (com alimentos), vaginal ou infusão IV lenta.",
+  nursingCautions: [
+    "Efeito antabuse: orientar proibição total de álcool durante e 48h após o uso.",
+    "Monitorar gosto metálico e náuseas.",
+    "Observar sintomas neurológicos (ataxia, confusão) em doses elevadas.",
+    "Evitar em gestantes no primeiro trimestre (conforme protocolos)."
+  ],
+  antidoteOrToxicity: "Suporte clínico em superdosagem.",
+  rarity: "Baixo Risco"
+},
+  {
 id: "med-midazolam-crit",
 name: "Midazolam",
 drugClass: "Benzodiazepínico (agonista do receptor GABA-A)",
@@ -1429,7 +1591,7 @@ nursingCautions: [
 antidoteOrToxicity: "Flumazenil (uso cauteloso, especialmente em pacientes com risco de convulsão); suporte ventilatório se necessário",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-misoprostol-obs",
     name: "Misoprostol",
     drugClass: "Análogo da prostaglandina E1",
@@ -1452,7 +1614,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Sem antídoto específico; suspender uso e suporte clínico; risco: hiperestimulação uterina, sofrimento fetal",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-morfina-geral",
 name: "Morfina",
 drugClass: "Opioide",
@@ -1473,7 +1635,7 @@ nursingCautions: [
 antidoteOrToxicity: "Naloxona",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-nistatina-aps",
     name: "Nistatina",
     drugClass: "Antifúngico poliênico",
@@ -1491,7 +1653,29 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Baixa toxicidade",
     rarity: "Baixo Risco"
   },
-{
+  {
+  id: "med-nitroprussiato-geral",
+  name: "Nitroprussiato de Sódio",
+  drugClass: "Vasodilatador potente (anti-hipertensivo venoso e arterial)",
+  indications: [
+    "Crise hipertensiva (emergência)",
+    "Insuficiência cardíaca descompensada (redução de pós-carga)",
+    "Hipotensão controlada em cirurgias"
+  ],
+  dosage: "0,3–10 mcg/kg/min em infusão contínua ajustada conforme PAM.",
+  preparation: "Frasco deve ser protegido da luz (fotossensível) com capa opaca.",
+  administration: "Exclusivamente IV através de bomba de infusão contínua.",
+  nursingCautions: [
+    "Monitorização rigorosa da PA (idealmente invasiva).",
+    "Trocar solução e equipo a cada 24 horas.",
+    "Monitorar toxicidade por cianeto (acidose metabólica, alteração mental).",
+    "Proteger a solução da luz imediatamente após preparo.",
+    "Não administrar se a solução mudar de cor (deve ser acastanhada clara)."
+  ],
+  antidoteOrToxicity: "Nitrito de sódio e tiossulfato de sódio em caso de intoxicação por cianeto.",
+  rarity: "Alto Risco"
+},
+  {
 id: "med-noradrenalina-geral",
 name: "Noradrenalina",
 drugClass: "Vasopressor (agonista α1 predominante)",
@@ -1512,7 +1696,7 @@ nursingCautions: [
 antidoteOrToxicity: "Fentolamina no local do extravasamento; reduzir ou suspender em hipertensão grave",
 rarity: "Alto Risco"
 },
-{
+  {
     id: "med-contr-06",
     name: "Noretisterona",
     drugClass: "Progestagênio (minipílula)",
@@ -1534,7 +1718,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Eventos: sangramento irregular, cefaleia. Baixo risco de toxicidade.",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-ocitocina-obst",
     name: "Ocitocina",
     drugClass: "Uterotônico (hormônio peptídico)",
@@ -1556,7 +1740,7 @@ rarity: "Alto Risco"
     antidoteOrToxicity: "Suspensão da infusão; uso de tocolíticos (ex: terbutalina) se hiperestimulação; riscos: sofrimento fetal, ruptura uterina",
     rarity: "Alto Risco"
   },
-{
+  {
 id: "med-omeprazol-geral",
 name: "Omeprazol",
 drugClass: "Inibidor da bomba de prótons",
@@ -1576,7 +1760,68 @@ nursingCautions: [
 antidoteOrToxicity: "Suporte clínico",
 rarity: "Baixo Risco"
 },
-{
+  {
+  id: "med-ondansetrona-geral",
+  name: "Ondansetrona",
+  drugClass: "Antiemético (antagonista do receptor 5-HT3)",
+  indications: [
+    "Prevenção e tratamento de náuseas e vômitos induzidos por quimioterapia",
+    "Vômitos pós-operatórios",
+    "Vômitos intensos em pronto socorro"
+  ],
+  dosage: "Adultos: 4 mg a 8 mg VO/IV de 8/8h ou conforme prescrição.",
+  preparation: "Comprimidos (incluinte orodispersíveis) e ampolas injetáveis.",
+  administration: "Via oral, SC, IM ou IV lento.",
+  nursingCautions: [
+    "Monitorar ECG em pacientes de risco (risco de prolongamento do intervalo QT).",
+    "Avaliar alívio dos sintomas gastrointestinais.",
+    "Observar cefaleia e constipação como efeitos comuns.",
+    "Administrar preferencialmente antes da quimioterapia."
+  ],
+  antidoteOrToxicity: "Suporte clínico; monitorar arritmias em superdosagem.",
+  rarity: "Baixo Risco"
+},
+  {
+  id: "med-oxacilina-geral",
+  name: "Oxacilina",
+  drugClass: "Antibiótico beta-lactâmico (penicilina penicilinase-resistente)",
+  indications: [
+    "Infecções por Staphylococcus aureus sensíveis a meticilina (MSSA)",
+    "Infecções de pele, ossos e endocardite estafilocócica"
+  ],
+  dosage: "Adultos: 1 g a 2 g IV a cada 4–6 horas.",
+  preparation: "Frasco-ampola (pó para reconstituição). Diluir em SF 0,9% ou SG 5%.",
+  administration: "IV lento ou infusão; pode ser IM profunda em doses menores.",
+  nursingCautions: [
+    "Verificar rigorosamente história de alergia a penicilinas.",
+    "Monitorar função hepática (risco de hepatite medicamentosa).",
+    "Avaliar sinais de flebite em acesso periférico.",
+    "Monitorar leucograma (risco de neutropenia em uso prolongado)."
+  ],
+  antidoteOrToxicity: "Suporte em anafilaxia (Adrenalina).",
+  rarity: "Baixo Risco"
+},
+  {
+  id: "med-paracetamol-geral",
+  name: "Paracetamol (Acetaminofeno)",
+  drugClass: "Analgésico e Antitérmico (não AINE)",
+  indications: [
+    "Febre",
+    "Dor leve a moderada"
+  ],
+  dosage: "Adultos: 500 mg a 1000 mg VO a cada 4–6h; máximo 4 g/dia.",
+  preparation: "Comprimidos, gotas e soluções orais.",
+  administration: "Via oral.",
+  nursingCautions: [
+    "Monitorar toxicidade hepática (especialmente se ingestão >4g/dia ou álcool).",
+    "Avaliar temperatura e escala de dor.",
+    "Observar reações alérgicas cutâneas (raras mas graves).",
+    "Atenção a formulações combinadas com opioides (risco de superdosagem)."
+  ],
+  antidoteOrToxicity: "N-acetilcisteína (NAC) para prevenir falência hepática em intoxicação aguda.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-penicilina-benzatina-gest",
     name: "Penicilina Benzatina",
     drugClass: "Antibiótico beta-lactâmico",
@@ -1598,7 +1843,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Antídoto: Adrenalina em caso de anafilaxia; reações: rash, choque anafilático",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-pep",
     name: "PEP (Profilaxia Pós-Exposição ao HIV)",
     drugClass: "Antirretrovirais combinados",
@@ -1620,7 +1865,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; suporte clínico em efeitos adversos",
     rarity: "Moderado Risco"
   },
-{
+  {
     id: "med-phmb",
     name: "PHMB",
     drugClass: "Antisséptico (poliexametileno biguanida)",
@@ -1638,7 +1883,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Baixa toxicidade",
     rarity: "Moderado Risco"
   },
-{
+  {
 id: "med-piperacilina-tazobactam",
 name: "Piperacilina + Tazobactam",
 drugClass: "Antibiótico beta-lactâmico + inibidor de beta-lactamase",
@@ -1662,7 +1907,30 @@ nursingCautions: [
 antidoteOrToxicity: "Não há antídoto específico; suspender droga e instituir suporte clínico em caso de reação grave",
 rarity: "Baixo Risco"
 },
-{
+  {
+  id: "med-prednisona-geral",
+  name: "Prednisona",
+  drugClass: "Corticosteroide (glicocorticoide sistêmico)",
+  indications: [
+    "Doenças inflamatórias (artrite, lúpus)",
+    "Condições alérgicas graves",
+    "Asma e DPOC exacerbadados",
+    "Imunossupressão em transplantes"
+  ],
+  dosage: "Adultos: 5 mg a 60 mg/dia VO, ajustado conforme a patologia.",
+  preparation: "Comprimidos orais.",
+  administration: "Via oral, preferencialmente pela manhã com alimentos.",
+  nursingCautions: [
+    "Não interromper bruscamente após uso prolongado (risco de insuficiência adrenal).",
+    "Monitorar glicemia (risco de hiperglicemia).",
+    "Observar alterações de humor, retenção hídrica e aumento de peso.",
+    "Reforçar risco de infecções devido à imunossupressão.",
+    "Monitorar pressão arterial."
+  ],
+  antidoteOrToxicity: "Redução gradual da dose (desmame); suporte sintomático.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-prep",
     name: "PrEP (Profilaxia Pré-Exposição ao HIV)",
     drugClass: "Antirretroviral preventivo",
@@ -1684,7 +1952,30 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico",
     rarity: "Moderado Risco"
   },
-{
+  {
+  id: "med-propranolol-geral",
+  name: "Propranolol",
+  drugClass: "Betabloqueador não seletivo",
+  indications: [
+    "Hipertensão arterial",
+    "Angina estável",
+    "Arritmias cardíacas",
+    "Profilaxia de enxaqueca",
+    "Controle de sintomas de ansiedade (tremores, taquicardia)"
+  ],
+  dosage: "Adultos: 40 mg a 160 mg/dia via oral, divididos em doses.",
+  preparation: "Comprimidos orais.",
+  administration: "Via oral.",
+  nursingCautions: [
+    "Contraindicado em pacientes com asma ou DPOC (risco de broncoespasmo).",
+    "Monitorar frequência cardíaca (não administrar se FC < 60 bpm) e PA.",
+    "Monitorar glicemia em diabéticos (pode mascarar sintomas de hipoglicemia).",
+    "Não suspender abruptamente (risco de infarto ou arritmia de rebote)."
+  ],
+  antidoteOrToxicity: "Atropina para bradicardia; Glucagon em intoxicação severa.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-mental-07",
     name: "Quetiapina",
     drugClass: "Antipsicótico atípico (antagonista D2 e 5-HT2)",
@@ -1708,7 +1999,27 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Intoxicação: sedação profunda, hipotensão, taquicardia. Tratamento de suporte.",
     rarity: "Alto Risco"
   },
-{
+  {
+  id: "med-ranitidina-geral",
+  name: "Ranitidina",
+  drugClass: "Antagonista do receptor H2 da histamina",
+  indications: [
+    "Úlcera gástrica ou duodenal",
+    "Refluxo gastroesofágico (DRGE)",
+    "Prevenção de úlcera de estresse em pacientes graves"
+  ],
+  dosage: "Adultos: 150 mg VO 2x/dia; ou 50 mg IV a cada 6–8 horas.",
+  preparation: "Comprimidos e ampolas injetáveis.",
+  administration: "Via oral ou IV lento.",
+  nursingCautions: [
+    "Ajustar dose em pacientes com insuficiência renal.",
+    "Monitorar estado mental em idosos (pode causar confusão).",
+    "Avaliar cessação da dor epigástrica e desconforto."
+  ],
+  antidoteOrToxicity: "Suporte clínico em superdosagem.",
+  rarity: "Baixo Risco"
+},
+  {
     id: "med-mental-04",
     name: "Risperidona",
     drugClass: "Antipsicótico atípico (antagonista dopamina D2 e serotonina 5-HT2)",
@@ -1731,7 +2042,28 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Intoxicação: sedação, taquicardia, hipotensão. Tratamento de suporte.",
     rarity: "Alto Risco"
   },
-{
+  {
+  id: "med-rivaroxabana-geral",
+  name: "Rivaroxabana",
+  drugClass: "Anticoagulante oral (inibidor direto do fator Xa)",
+  indications: [
+    "Prevenção de AVC em fibrilação atrial não valvular",
+    "Tratamento e prevenção de TVP e Embolia Pulmonar",
+    "Profilaxia em cirurgias ortopédicas"
+  ],
+  dosage: "10 mg a 20 mg VO, uma vez ao dia.",
+  preparation: "Comprimidos orais.",
+  administration: "Via oral; doses de 15mg ou 20mg devem ser tomadas com alimentos.",
+  nursingCautions: [
+    "Monitorar sinais de sangramento (ativa ou oculta).",
+    "Explicar ao paciente a importância de não pular doses.",
+    "Não requer monitorização rotineira de INR (diferente da varfarina).",
+    "Avaliar função renal antes e durante o tratamento."
+  ],
+  antidoteOrToxicity: "Andexanet alfa (antídoto específico); se não disponível, suporte com complexo protrombínico.",
+  rarity: "Moderado Risco"
+},
+  {
     id: "med-salbutamol-obs",
     name: "Salbutamol",
     drugClass: "Broncodilatador (agonista β2-adrenérgico)",
@@ -1754,7 +2086,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: taquicardia, tremores, hipocalemia em uso excessivo",
     rarity: "Baixo Risco"
   },
-{
+  {
 id: "med-mental-03",
 name: "Sertralina",
 drugClass: "Inibidor seletivo da recaptação de serotonina (ISRS)",
@@ -1778,7 +2110,7 @@ nursingCautions: [
 antidoteOrToxicity: "Síndrome serotoninérgica: suspensão imediata e suporte clínico.",
 rarity: "Baixo Risco"
 },
-{
+  {
     id: "med-sinvastatina",
     name: "Sinvastatina",
     drugClass: "Estatina (inibidor da HMG-CoA redutase)",
@@ -1801,7 +2133,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Sem antídoto específico; toxicidade: miopatia, rabdomiólise (raro), hepatotoxicidade",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-sulfadiazina-prata",
     name: "Sulfadiazina de Prata",
     drugClass: "Antimicrobiano tópico",
@@ -1820,7 +2152,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Raro efeito sistêmico",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-sulfato-magnesio-obs",
     name: "Sulfato de Magnésio",
     drugClass: "Anticonvulsivante / Tocolítico",
@@ -1842,7 +2174,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Antídoto: Gluconato de cálcio 10% 10 mL IV lento; toxicidade: depressão respiratória, arreflexia, parada cardíaca",
     rarity: "Alto Risco"
   },
-{
+  {
     id: "med-sulfato-ferroso",
     name: "Sulfato Ferroso",
     drugClass: "Suplemento de ferro",
@@ -1863,7 +2195,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Intoxicação por ferro é grave → uso de deferoxamina",
     rarity: "Baixo Risco"
   },
-{
+  {
     id: "med-neo-01",
     name: "Surfactante Pulmonar (Beractanto/Poractanto alfa)",
     drugClass: "Agente tensoativo pulmonar",
@@ -1885,7 +2217,27 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Eventos adversos: obstrução de via aérea, hipoxemia transitória. Manejo com suporte ventilatório.",
     rarity: "Alto Risco"
   },
-{
+  {
+  id: "med-tramadol-geral",
+  name: "Tramadol",
+  drugClass: "Analgetico opioide sintético",
+  indications: [
+    "Dor moderada a severa"
+  ],
+  dosage: "Adultos: 50 mg a 100 mg VO/IV a cada 4–6h; máximo 400 mg/dia.",
+  preparation: "Cápsulas, gotas e ampolas injetáveis.",
+  administration: "Via oral ou IV lento (mínimo 2-3 min para evitar náuseas).",
+  nursingCautions: [
+    "Monitorar náuseas e vômitos (muito comuns).",
+    "Observar tontura e sonolência.",
+    "Risco de convulsões, especialmente em pacientes com histórico ou doses altas.",
+    "Monitorar risco de síndrome serotoninérgica quando usado com antidepressivos.",
+    "Avaliar padrão respiratório."
+  ],
+  antidoteOrToxicity: "Naloxona para depressão respiratória; suporte para convulsões.",
+  rarity: "Moderado Risco"
+},
+  {
     id: "med-mental-08",
     name: "Valproato de Sódio (Ácido Valproico)",
     drugClass: "Estabilizador de humor / anticonvulsivante",
@@ -1908,7 +2260,7 @@ rarity: "Baixo Risco"
     antidoteOrToxicity: "Intoxicação: depressão do SNC, hepatotoxicidade. Tratamento: suporte e L-carnitina em casos graves.",
     rarity: "Alto Risco"
   },
-{
+  {
 id: "med-vancomicina-geral",
 name: "Vancomicina",
 drugClass: "Antibiótico glicopeptídeo",
@@ -1931,6 +2283,49 @@ nursingCautions: [
 ],
 antidoteOrToxicity: "Não há antídoto específico; em toxicidade: suspender droga, suporte renal; Síndrome do 'Homem Vermelho': reduzir velocidade e administrar anti-histamínico",
 rarity: "Moderado Risco"
+},
+  {
+  id: "med-varfarina-geral",
+  name: "Varfarina",
+  drugClass: "Anticoagulante oral (antagonista da vitamina K)",
+  indications: [
+    "Prevenção e tratamento de tromboembolismo venoso",
+    "Fibrilação atrial",
+    "Próteses valvares cardíacas"
+  ],
+  dosage: "Inicial: 2,5 mg a 5 mg VO/dia; ajustada conforme RNI/INR.",
+  preparation: "Comprimidos de 5 mg (frequentemente fracionados).",
+  administration: "Via oral, no mesmo horário diariamente.",
+  nursingCautions: [
+    "Monitorar rigorosamente o RNI (alvo geralmente 2,0 a 3,0).",
+    "Observar sinais de sangramento (gengivorragia, hematúria, melena).",
+    "Orientar dieta constante em vitamina K (folhas verdes escuras).",
+    "Numerosas interações medicamentosas e com alimentos.",
+    "Altamente teratogênica; contraindicada na gestação."
+  ],
+  antidoteOrToxicity: "Vitamina K (fitomenadiona) e Plasma Fresco Congelado ou Complexo Protrombínico.",
+  rarity: "Alto Risco"
+},
+  {
+  id: "med-verapamil-geral",
+  name: "Verapamil",
+  drugClass: "Bloqueador de canais de cálcio (fenilalquilamina)",
+  indications: [
+    "Angina de peito",
+    "Hipertensão arterial",
+    "Taquicardias supraventriculares"
+  ],
+  dosage: "Oral: 80 mg a 120 mg 3x/dia; IV: 5–10 mg bolus lento.",
+  preparation: "Comprimidos e ampolas injetáveis.",
+  administration: "Via oral ou IV lento (2 minutos) sob monitorização.",
+  nursingCautions: [
+    "Monitorar frequência cardíaca e PA (risco de bradicardia e bloqueios).",
+    "Observar constipação intestinal (efeito colateral comum).",
+    "Evitar em pacientes com insuficiência cardíaca severa (efeito inotrópico negativo).",
+    "Evitar suco de toranja (grapefruit) que aumenta níveis da droga."
+  ],
+  antidoteOrToxicity: "Cálcio (Gluconato ou Cloreto) IV; Glucagon; suporte inotrópico.",
+  rarity: "Alto Risco"
 }
-];
 
+];
