@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "User email captured during login for remarketing",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's email address"
+        },
+        "capturedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the email was captured"
+        }
+      },
+      "required": ["email", "capturedAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of captured emails"
+    }
+  }
+}

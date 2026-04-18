@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper for valid ID
+    function isValidId(id) { 
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$') || id.matches('^.+@.+\\..+$'); 
+    }
+
+    // Validation for Lead
+    function isValidLead(data) {
+      return data.keys().hasAll(['email', 'capturedAt']) 
+        && data.keys().size() == 2
+        && data.email is string 
+        && data.email.size() <= 150
+        && data.email.matches('^.+@.+\\..+$')
+        && data.capturedAt == request.time;
+    }
+
+    // Leads collection: anyone can submit their email to "sign in"
+    match /leads/{email} {
+      allow create: if isValidId(email) && isValidLead(request.resource.data);
+      // No reading or updating by clients to prevent scraping the email list
+      allow get, list, update, delete: if false;
+    }
+
+    // Connection test document
+    match /test/connection {
+      allow get: if true;
+    }
+  }
+}
