@@ -22,6 +22,8 @@ export default function Bulario() {
 
   return (
     <div className="space-y-4 animate-fade-in relative">
+      {/* Console log inserted to force strict rebuild/cache bust for the URL fixes */}
+      {console.log('Bulario component loaded with link: https://wa.link/xzk0b5')}
       {!selectedMed ? (
         <>
           <div className="relative mb-6">
