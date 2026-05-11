@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, Type } from '@google/genai';
+import { toast } from 'sonner';
 import type { ClinicalCase } from '@/data/mockCases';
 import type { Specialty, Difficulty } from './useGameState';
 import { parseCSV } from '@/lib/csvParser';
@@ -193,16 +194,63 @@ export function useGenerateCase() {
       
       const prompt = `
         Você é a Professora Kátia, uma enfermeira preceptora rigorosa mas didática.
-        Crie um caso clínico de ${specialty} com dificuldade ${difficulty}.
+        Crie um caso clínico INÉDITO e detalhado de ${specialty} com dificuldade ${difficulty}.
         Seed: ${randomSeed}. Retorne APENAS JSON.
-        Estrutura: { id, specialty, difficulty, patient: { name, age, gender, occupation }, clinicalHistory, physicalExam, vitalSigns: { bp, hr, rr, temp, spo2 }, options: [{ id, text, isCorrect, explanation }], nursingConduct, medicationDosage, treatment }
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-3.1-pro-preview', // Mudando pro modelo pro para geração complexa
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              id: { type: Type.STRING },
+              specialty: { type: Type.STRING },
+              difficulty: { type: Type.STRING },
+              patient: {
+                type: Type.OBJECT,
+                properties: {
+                  name: { type: Type.STRING },
+                  age: { type: Type.NUMBER },
+                  gender: { type: Type.STRING },
+                  occupation: { type: Type.STRING }
+                },
+                required: ["name", "age", "gender", "occupation"]
+              },
+              clinicalHistory: { type: Type.STRING, description: "História clínica detalhada" },
+              physicalExam: { type: Type.STRING, description: "Exame físico completo" },
+              vitalSigns: {
+                type: Type.OBJECT,
+                properties: {
+                  bp: { type: Type.STRING },
+                  hr: { type: Type.NUMBER },
+                  rr: { type: Type.NUMBER },
+                  temp: { type: Type.NUMBER },
+                  spo2: { type: Type.NUMBER }
+                },
+                required: ["bp", "hr", "rr", "temp", "spo2"]
+              },
+              options: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    id: { type: Type.STRING },
+                    text: { type: Type.STRING },
+                    isCorrect: { type: Type.BOOLEAN },
+                    explanation: { type: Type.STRING }
+                  },
+                  required: ["id", "text", "isCorrect", "explanation"]
+                }
+              },
+              nursingConduct: { type: Type.STRING, description: "Conduta de enfermagem detalhada" },
+              medicationDosage: { type: Type.STRING, description: "Posologia e medicações" },
+              treatment: { type: Type.STRING, description: "Tratamento geral" }
+            },
+            required: ["id", "specialty", "difficulty", "patient", "clinicalHistory", "physicalExam", "vitalSigns", "options", "nursingConduct", "medicationDosage", "treatment"]
+          }
         }
       });
 
@@ -226,7 +274,9 @@ export function useGenerateCase() {
       setLoading(false);
       return caseData;
     } catch (error) {
-      console.error("Error generating case:", error);
+      console.error("Error generating case (MIGHT BE KEY MISSING OR JSON PARSE FAIL):", error);
+      // Fallback apenas se der erro MUITO grave, mas vamos alertar no console.
+      toast.error('Erro na geração com IA. Usando caso do banco de reserva.');
       const bankCases = getBankCases(specialty, difficulty, playedCases);
       if (bankCases && bankCases.length > 0) {
         const randomCase = bankCases[Math.floor(Math.random() * bankCases.length)];
