@@ -179,6 +179,10 @@ export function useGenerateCase() {
       const apiKey = process.env.GEMINI_API_KEY;
       
       // O usuário pediu para sempre gerar o caso com IA para a demo
+      if (!apiKey) {
+        console.warn("API Key is missing. Falling back to question bank.");
+      }
+      
       const useBank = !apiKey && bankCases.length > 0;
 
       if (useBank) {
@@ -194,12 +198,13 @@ export function useGenerateCase() {
       
       const prompt = `
         Você é a Professora Kátia, uma enfermeira preceptora rigorosa mas didática.
-        Crie um caso clínico INÉDITO e detalhado de ${specialty} com dificuldade ${difficulty}.
-        Seed: ${randomSeed}. Retorne APENAS JSON.
+        Crie um caso clínico INÉDITO e COMPLETAMENTE detalhado de ${specialty} com dificuldade ${difficulty}.
+        Preencha ABSOLUTAMENTE TODOS os campos exigidos pela estrutura (história clínica, exame físico, sinais vitais completos, 4 opções válidas, conduta de enfermagem, posologia farmacológica e tratamento geral).
+        Seed: ${randomSeed}. Retorne APENAS JSON válido.
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3.1-pro-preview', // Mudando pro modelo pro para geração complexa
+        model: 'gemini-3-flash-preview',
         contents: prompt,
         config: {
           responseMimeType: 'application/json',
@@ -275,8 +280,7 @@ export function useGenerateCase() {
       return caseData;
     } catch (error) {
       console.error("Error generating case (MIGHT BE KEY MISSING OR JSON PARSE FAIL):", error);
-      // Fallback apenas se der erro MUITO grave, mas vamos alertar no console.
-      toast.error('Erro na geração com IA. Usando caso do banco de reserva.');
+      // Fallback silencioso para o banco caso a IA falhe
       const bankCases = getBankCases(specialty, difficulty, playedCases);
       if (bankCases && bankCases.length > 0) {
         const randomCase = bankCases[Math.floor(Math.random() * bankCases.length)];
