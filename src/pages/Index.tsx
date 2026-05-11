@@ -262,7 +262,7 @@ export default function Index() {
 
               <div className="grid gap-3">
                 <a 
-                  href="https://enfaka.my.canva.site/plantaosecreto" 
+                  href="https://wa.link/xzk0b5" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-heading font-bold tracking-wider transition-all uppercase text-sm shadow-[0_0_25px_rgba(0,212,255,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"

@@ -150,7 +150,7 @@ export default function Bulario() {
                     Você está a um passo de acessar posologias complexas, preparos detalhados e cuidados críticos que salvam vidas. Não fique na dúvida na hora H!
                   </p>
                   <a 
-                    href="https://enfaka.my.canva.site/plantaosecreto" 
+                    href="https://wa.link/xzk0b5" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold text-sm tracking-wide shadow-[0_0_20px_rgba(0,212,255,0.3)] hover:scale-[1.02] transition-transform active:scale-[0.98]"
