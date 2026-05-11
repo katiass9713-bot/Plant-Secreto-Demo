@@ -174,13 +174,11 @@ export function useGenerateCase() {
   const generate = async (specialty: Specialty, difficulty: Difficulty, userId?: string, playedCases: string[] = []): Promise<ClinicalCase | null> => {
     setLoading(true);
     try {
-      const sanitizedId = userId?.toLowerCase() || '';
-      const isDemoUser = sanitizedId.includes('demo') || sanitizedId === 'alunodemo@plantao.com';
-      const useBankCycle = isDemoUser || playedCases.length % 3 !== 0;
       const bankCases = getBankCases(specialty, difficulty, playedCases);
       const apiKey = process.env.GEMINI_API_KEY;
       
-      const useBank = (useBankCycle || !apiKey) && bankCases.length > 0;
+      // O usuário pediu para sempre gerar o caso com IA para a demo
+      const useBank = !apiKey && bankCases.length > 0;
 
       if (useBank) {
         const randomCase = bankCases[Math.floor(Math.random() * bankCases.length)];
